@@ -11,6 +11,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import CartWidget from "./CartWidget";
 
 const pages = ["Productos", "Precios", "Blog"];
 const settings = ["Perfil", "Cuenta", "Cerrar Sesion"];
@@ -35,6 +36,9 @@ const ResponsiveAppBar = () => {
   };
 
   return (
+    <>
+
+    
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -89,7 +93,6 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
@@ -100,8 +103,12 @@ const ResponsiveAppBar = () => {
               >
                 {page}
               </Button>
-            ))}
+              ))}
+
           </Box>
+              <CartWidget/>
+          
+          
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Abrir Configuracion">
@@ -135,6 +142,10 @@ const ResponsiveAppBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
+
+    
+    </>
   );
+
 };
 export default ResponsiveAppBar;
