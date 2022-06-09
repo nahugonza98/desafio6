@@ -55,5 +55,6 @@
         `<img src='${productos[random].thumbnail}' style="width: 100px" /><br>${productos[random].title}, <br> Precio:$ ${productos[random].price}`
     );
     });
+    
 
 
